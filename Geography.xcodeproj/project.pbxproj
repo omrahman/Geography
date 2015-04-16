@@ -12,6 +12,8 @@
 		07D658931ADEE553002DD979 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D658921ADEE553002DD979 /* Images.xcassets */; };
 		07D658961ADEE553002DD979 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07D658941ADEE553002DD979 /* LaunchScreen.xib */; };
 		07D658A21ADEE553002DD979 /* GeographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D658A11ADEE553002DD979 /* GeographyTests.m */; };
+		07D658AC1ADEE57B002DD979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D658AB1ADEE57B002DD979 /* MapKit.framework */; };
+		07D658AF1ADEE778002DD979 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D658AE1ADEE778002DD979 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 		07D6589B1ADEE553002DD979 /* GeographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D658A01ADEE553002DD979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D658A11ADEE553002DD979 /* GeographyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeographyTests.m; sourceTree = "<group>"; };
+		07D658AB1ADEE57B002DD979 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		07D658AD1ADEE778002DD979 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		07D658AE1ADEE778002DD979 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D658AC1ADEE57B002DD979 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 		07D6587F1ADEE553002DD979 = {
 			isa = PBXGroup;
 			children = (
+				07D658AB1ADEE57B002DD979 /* MapKit.framework */,
 				07D6588A1ADEE553002DD979 /* Geography */,
 				07D6589E1ADEE553002DD979 /* GeographyTests */,
 				07D658891ADEE553002DD979 /* Products */,
@@ -81,6 +88,8 @@
 				07D658921ADEE553002DD979 /* Images.xcassets */,
 				07D658941ADEE553002DD979 /* LaunchScreen.xib */,
 				07D6588B1ADEE553002DD979 /* Supporting Files */,
+				07D658AD1ADEE778002DD979 /* MapViewController.h */,
+				07D658AE1ADEE778002DD979 /* MapViewController.m */,
 			);
 			path = Geography;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D658AF1ADEE778002DD979 /* MapViewController.m in Sources */,
 				07D658911ADEE553002DD979 /* AppDelegate.m in Sources */,
 				07D6588E1ADEE553002DD979 /* main.m in Sources */,
 			);
@@ -330,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Geography/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -340,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Geography/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -398,6 +410,7 @@
 				07D658A71ADEE553002DD979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07D658A81ADEE553002DD979 /* Build configuration list for PBXNativeTarget "GeographyTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +419,7 @@
 				07D658AA1ADEE553002DD979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
