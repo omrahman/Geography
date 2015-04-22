@@ -78,6 +78,18 @@
         pointAnnotation.title = [placemark country];
         
         [self.mapView addAnnotation:pointAnnotation];
+        
+        
+        WebViewController *wvc = [[WebViewController alloc] init];
+        NSString *base = @"http://en.wikipedia.org/wiki/";
+        NSString *country = [placemark country];
+        NSString *query = [base stringByAppendingString:country];
+        NSString *newQuery = [query stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+        NSLog(@"%@", query);
+        NSURL *URL = [NSURL URLWithString:newQuery];
+        wvc.URL = URL;
+        [self.navigationController pushViewController:wvc animated:YES];
+        
     }];
 
 }

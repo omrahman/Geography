@@ -22,9 +22,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    
     MapViewController *mvc = [[MapViewController alloc] init];
-    [self.window addSubview:mvc.view];
-    [self.window setRootViewController:mvc];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mvc];
+
+    //[self.window addSubview:mvc.view];
+    [self.window setRootViewController:nc];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window makeKeyAndVisible];
     return YES;
 }

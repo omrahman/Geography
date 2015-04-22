@@ -11,6 +11,4 @@
 
 @interface MapViewController : UIViewController
 
-@property (nonatomic, strong) WebViewController *webViewController;
-
 @end

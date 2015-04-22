@@ -20,10 +20,12 @@
     self.view = webView;
 }
 
-- (void)setUrl:(NSURL *)url {
-    _url = url;
-    if (_url) {
-        NSURLRequest *req = [NSURLRequest requestWithURL:_url];
+- (void)setURL:(NSURL *)URL {
+    NSLog(@"Setting URL %@", URL);
+    _URL = URL;
+    if (_URL) {
+        NSLog(@"Loading URL %@", URL);
+        NSURLRequest *req = [NSURLRequest requestWithURL:_URL];
         [(UIWebView *)self.view loadRequest:req];
     }
 }
