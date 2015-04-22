@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MapKit/MapKit.h"
+#import "WebViewController.h"
 
 @interface MapViewController ()
 
@@ -18,20 +19,17 @@
 
 @implementation MapViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
-- (void)loadView {
+- (void)loadView
+{
     CGRect bounds = [[UIScreen mainScreen] bounds];
     MKMapView *mapView = [[MKMapView alloc] initWithFrame:bounds];
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                           initWithTarget:self action:@selector(handleGesture:)];
-    lpgr.minimumPressDuration = 0.5;  //user must press for 2 seconds
+    lpgr.minimumPressDuration = 0.5;
     [mapView addGestureRecognizer:lpgr];
     self.mapView = mapView;
     self.view = mapView;
+    
 }
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
@@ -43,7 +41,7 @@
         }
         self.timer = [NSTimer scheduledTimerWithTimeInterval:0.0
                                                       target:self
-                                                    selector:@selector(handleTimer:)
+                                                    selector:@selector(handleGestureTimer:)
                                                     userInfo:gestureRecognizer
                                                      repeats:NO];
         return;
@@ -55,47 +53,50 @@
     }
 }
 
-- (void)handleTimer:(NSTimer *)timer {
-    
+- (void)handleGestureTimer:(NSTimer *)timer
+{
     UIGestureRecognizer *gestureRecognizer = (UIGestureRecognizer *)timer.userInfo;
-    [self addAnnotation:gestureRecognizer];
-    
+    [self makeAndAddAnnotation:gestureRecognizer];
 }
 
-- (void)addAnnotation:(UIGestureRecognizer *)gestureRecognizer {
+- (void)makeAndAddAnnotation:(UIGestureRecognizer *)gestureRecognizer
+{
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
-    
-    
     CLLocationCoordinate2D touchMapCoordinate =
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     CLLocation *coordinate = [[CLLocation alloc] initWithLatitude:touchMapCoordinate.latitude
                                                         longitude:touchMapCoordinate.longitude];
-    
-    
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [geocoder reverseGeocodeLocation:coordinate completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (error) {
-            NSLog(@"ERROR");
-        }
-        CLPlacemark *placemark;
-        if ([placemarks count]) {
-            placemark = placemarks[0];
-        } else {
-            NSLog(@"ERROR");
-        }
+        if (error) { NSLog(@"ERROR"); }
         
-        NSLog(@"%@", placemark);
-        NSString *country = [placemark country];
-        NSString *locality = [placemark locality];
-        NSLog(@"%@, %@", locality, country);
+        CLPlacemark *placemark = placemarks[0];
+        [self logPlacemark:placemark];
+        
         MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
         pointAnnotation.coordinate = touchMapCoordinate;
-        pointAnnotation.title = country;
+        pointAnnotation.title = [placemark country];
         
         [self.mapView addAnnotation:pointAnnotation];
-
     }];
+
+}
+
+- (void)logPlacemark:(CLPlacemark *)placemark
+{
+    NSString *country = [placemark country];
+    NSString *administrativeArea = [placemark administrativeArea];
+    NSString *locality = [placemark locality];
+    NSString *ocean = [placemark ocean];
+    NSArray *areasOfInterest = [placemark areasOfInterest];
     
+    for (NSObject *area in areasOfInterest) {
+        NSLog(@"%@", area);
     }
+    
+    NSLog(@"%@", ocean);
+    NSLog(@"%@", administrativeArea);
+    NSLog(@"%@, %@", locality, country);
+}
 
 @end

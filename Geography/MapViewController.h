@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebViewController.h"
 
 @interface MapViewController : UIViewController
+
+@property (nonatomic, strong) WebViewController *webViewController;
 
 @end
