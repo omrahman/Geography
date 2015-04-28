@@ -27,12 +27,15 @@
 
 @implementation QuizMapViewController
 
-- (instancetype)init {
+- (instancetype)initWithQuestionBank:(QuestionBank *)questionBank {
     self = [super init];
     if (self) {
-        self.currentQuestion = @"";
+        //self.currentQuestion = @"";
+        self.questionBank = questionBank;
+        NSString *question = [self.questionBank randomQuestion];
+        self.currentQuestion = question;
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-        self.questionBank = [[QuestionBank alloc] init];
+        //self.questionBank = [[QuestionBank alloc] init];
         self.questionBank.delegate = self;
         self.score = 0;
         self.gameOver = NO;
@@ -49,12 +52,13 @@
     self.scoreLabel.layer.borderColor = [UIColor blackColor].CGColor;
     self.scoreLabel.layer.borderWidth = 1.0;
     
+    self.questionLabel.text = self.currentQuestion;
     self.questionLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
     self.questionLabel.layer.borderColor = [UIColor blackColor].CGColor;
     self.questionLabel.layer.borderWidth = 1.0;
     
     [self.mapView addGestureRecognizer:self.tapGestureRecognizer];
-    [self changeQuestion];
+    //[self changeQuestion];
 
 }
 

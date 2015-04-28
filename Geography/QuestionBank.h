@@ -11,8 +11,11 @@
 @interface QuestionBank : NSObject
 
 @property (nonatomic, readonly, copy) NSArray *questions;
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic) id delegate;
 
+- (instancetype)init;
+- (instancetype)initWithName:(NSString *)name array:(NSArray *)array;
 - (NSString *)randomQuestion;
 - (void)setDelegate:(id)delegate;
 

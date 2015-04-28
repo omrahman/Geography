@@ -19,16 +19,22 @@
 @implementation QuestionBank
 
 - (instancetype)init {
+    NSArray *defaultArray = @[@"United States",
+                              @"China",
+                              @"Germany",
+                              @"Russia",
+                              @"Italy"];
+    return [self initWithName:@"Default" array:defaultArray];
+}
+
+// Designated initializer
+- (instancetype)initWithName:(NSString *)name
+                       array:(NSArray *)array {
     self = [super init];
     if (self) {
-        // TODO: Create a designated initializer to handle initting with array
-        NSArray *HARDCODED_ARRAY = @[@"United States",
-                                     @"China",
-                                     @"Germany",
-                                     @"Russia",
-                                     @"Italy"];
-        _privateQuestions = [[NSMutableArray alloc] initWithArray:HARDCODED_ARRAY];
+        _privateQuestions = [[NSMutableArray alloc] initWithArray:array copyItems:YES];
         _alreadyAsked = [[NSMutableArray alloc] init];
+        _name = name;
     }
     return self;
 }

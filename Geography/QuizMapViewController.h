@@ -21,4 +21,6 @@
 
 @property (nonatomic, strong) QuestionBank *questionBank;
 
+- (instancetype)initWithQuestionBank:(QuestionBank *)questionBank;
+
 @end
