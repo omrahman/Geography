@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 078676C01AE85112006D07BB /* WikipediaHelper.m */; };
+		079333141AEF43D800A13665 /* QuizMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079333121AEF43D800A13665 /* QuizMapViewController.m */; };
+		079333151AEF43D800A13665 /* QuizMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079333131AEF43D800A13665 /* QuizMapViewController.xib */; };
+		079333191AEF44FC00A13665 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079333171AEF44FC00A13665 /* HomeViewController.m */; };
+		0793331A1AEF44FC00A13665 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079333181AEF44FC00A13665 /* HomeViewController.xib */; };
 		07A66B241AE75A1300756D21 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A66B231AE75A1300756D21 /* WebViewController.m */; };
 		07D6588E1ADEE553002DD979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D6588D1ADEE553002DD979 /* main.m */; };
 		07D658911ADEE553002DD979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D658901ADEE553002DD979 /* AppDelegate.m */; };
@@ -29,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		078676BF1AE85112006D07BB /* WikipediaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaHelper.h; sourceTree = "<group>"; };
+		078676C01AE85112006D07BB /* WikipediaHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaHelper.m; sourceTree = "<group>"; };
+		079333111AEF43D800A13665 /* QuizMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMapViewController.h; sourceTree = "<group>"; };
+		079333121AEF43D800A13665 /* QuizMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMapViewController.m; sourceTree = "<group>"; };
+		079333131AEF43D800A13665 /* QuizMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizMapViewController.xib; sourceTree = "<group>"; };
+		079333161AEF44FC00A13665 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		079333171AEF44FC00A13665 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		079333181AEF44FC00A13665 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		07A66B221AE75A1300756D21 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		07A66B231AE75A1300756D21 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		07D658881ADEE553002DD979 /* Geography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geography.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,9 +107,17 @@
 			isa = PBXGroup;
 			children = (
 				07D6588F1ADEE553002DD979 /* AppDelegate.h */,
+				079333111AEF43D800A13665 /* QuizMapViewController.h */,
+				079333121AEF43D800A13665 /* QuizMapViewController.m */,
+				079333131AEF43D800A13665 /* QuizMapViewController.xib */,
 				07D658901ADEE553002DD979 /* AppDelegate.m */,
+				078676BF1AE85112006D07BB /* WikipediaHelper.h */,
+				078676C01AE85112006D07BB /* WikipediaHelper.m */,
 				07D658921ADEE553002DD979 /* Images.xcassets */,
 				07D658941ADEE553002DD979 /* LaunchScreen.xib */,
+				079333161AEF44FC00A13665 /* HomeViewController.h */,
+				079333171AEF44FC00A13665 /* HomeViewController.m */,
+				079333181AEF44FC00A13665 /* HomeViewController.xib */,
 				07D6588B1ADEE553002DD979 /* Supporting Files */,
 				07D658AD1ADEE778002DD979 /* MapViewController.h */,
 				07D658AE1ADEE778002DD979 /* MapViewController.m */,
@@ -232,7 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D658961ADEE553002DD979 /* LaunchScreen.xib in Resources */,
+				079333151AEF43D800A13665 /* QuizMapViewController.xib in Resources */,
 				07D658931ADEE553002DD979 /* Images.xcassets in Resources */,
+				0793331A1AEF44FC00A13665 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079333141AEF43D800A13665 /* QuizMapViewController.m in Sources */,
 				07D658AF1ADEE778002DD979 /* MapViewController.m in Sources */,
 				07D658911ADEE553002DD979 /* AppDelegate.m in Sources */,
+				078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */,
 				07D6588E1ADEE553002DD979 /* main.m in Sources */,
+				079333191AEF44FC00A13665 /* HomeViewController.m in Sources */,
 				07A66B241AE75A1300756D21 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

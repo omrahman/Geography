@@ -10,6 +10,7 @@
 #import "MapKit/MapKit.h"
 #import "MapViewController.h"
 #import "WebViewController.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,9 +23,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    HomeViewController *hvc = [[HomeViewController alloc] init];
     
-    MapViewController *mvc = [[MapViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mvc];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
 
     //[self.window addSubview:mvc.view];
     [self.window setRootViewController:nc];

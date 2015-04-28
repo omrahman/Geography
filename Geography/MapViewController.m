@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "MapKit/MapKit.h"
 #import "WebViewController.h"
+#import "WikipediaHelper.h"
 
 @interface MapViewController ()
 
@@ -77,17 +78,14 @@
         pointAnnotation.coordinate = touchMapCoordinate;
         pointAnnotation.title = [placemark country];
         
+        // When creating a custom MKPointAnnotation/MKPinPointAnnotation, make sure we have a reference
+        // to its placemark
+        
         [self.mapView addAnnotation:pointAnnotation];
         
-        
         WebViewController *wvc = [[WebViewController alloc] init];
-        NSString *base = @"http://en.wikipedia.org/wiki/";
-        NSString *country = [placemark country];
-        NSString *query = [base stringByAppendingString:country];
-        NSString *newQuery = [query stringByReplacingOccurrencesOfString:@" " withString:@"_"];
-        NSLog(@"%@", query);
-        NSURL *URL = [NSURL URLWithString:newQuery];
-        wvc.URL = URL;
+        wvc.title = @"Wikipedia";
+        wvc.URL = [WikipediaHelper makeURLFromPlacemark:placemark];
         [self.navigationController pushViewController:wvc animated:YES];
         
     }];
