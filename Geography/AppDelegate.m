@@ -11,6 +11,7 @@
 #import "ExploreMapViewController.h"
 #import "WebViewController.h"
 #import "HomeViewController.h"
+#import "QuestionBankTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,8 +27,7 @@
     HomeViewController *hvc = [[HomeViewController alloc] init];
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
-
-    //[self.window addSubview:mvc.view];
+    
     [self.window setRootViewController:nc];
     [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window makeKeyAndVisible];

@@ -14,10 +14,8 @@
 @interface QuizMapViewController ()
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (nonatomic, strong) NSMutableArray *locationStrings;
 @property (nonatomic, strong) NSString *currentQuestion;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
-@property (nonatomic, strong) QuestionBank *questionBank;
 @property (nonatomic) NSInteger score;
 @property (nonatomic) BOOL gameOver;
 
@@ -32,7 +30,6 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.locationStrings = [[NSMutableArray alloc] initWithArray:@[@"United States", @"China", @"Russia"]];
         self.currentQuestion = @"";
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
         self.questionBank = [[QuestionBank alloc] init];

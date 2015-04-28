@@ -9,11 +9,13 @@
 #import "HomeViewController.h"
 #import "QuizMapViewController.h"
 #import "ExploreMapViewController.h"
+#import "QuestionBankTableViewController.h"
 
 @interface HomeViewController ()
 
 @property (nonatomic, strong) ExploreMapViewController *mvc;
 @property (nonatomic, strong) QuizMapViewController *qvc;
+@property (nonatomic, strong) QuestionBankTableViewController *qbtvc;
 
 @end
 
@@ -24,6 +26,9 @@
     if (self) {
         _mvc = [[ExploreMapViewController alloc] init];
         _mvc.title = @"Explore";
+        _qbtvc = [[QuestionBankTableViewController alloc] init];
+        _qbtvc.title = @"Select a question bank";
+
     }
     return self;
 }
@@ -35,11 +40,7 @@
 
 - (IBAction)quizButton:(id)sender {
     self.navigationController.navigationBarHidden = NO;
-    // Start a new game every time
-    self.qvc = [[QuizMapViewController alloc] init];
-    self.qvc.title = @"Where is...";
-
-    [self.navigationController pushViewController:self.qvc animated:YES];
+    [self.navigationController pushViewController:self.qbtvc animated:YES];
 }
 
 - (void)viewDidLoad {

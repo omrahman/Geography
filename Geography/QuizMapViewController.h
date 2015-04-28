@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuestionBank.h"
 
 @protocol QuestionBankDelegate <NSObject>
 
@@ -15,6 +16,9 @@
 
 @end
 
+
 @interface QuizMapViewController : UIViewController <QuestionBankDelegate>
+
+@property (nonatomic, strong) QuestionBank *questionBank;
 
 @end

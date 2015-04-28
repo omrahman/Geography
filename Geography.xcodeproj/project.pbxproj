@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07813B411AF00032005C31AC /* QuestionBankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07813B401AF00032005C31AC /* QuestionBankTableViewController.m */; };
+		07813B451AF00145005C31AC /* QuestionBankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07813B431AF00145005C31AC /* QuestionBankTableViewCell.m */; };
 		078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 078676C01AE85112006D07BB /* WikipediaHelper.m */; };
 		079333141AEF43D800A13665 /* QuizMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079333121AEF43D800A13665 /* QuizMapViewController.m */; };
 		079333151AEF43D800A13665 /* QuizMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079333131AEF43D800A13665 /* QuizMapViewController.xib */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07813B3F1AF00032005C31AC /* QuestionBankTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBankTableViewController.h; sourceTree = "<group>"; };
+		07813B401AF00032005C31AC /* QuestionBankTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBankTableViewController.m; sourceTree = "<group>"; };
+		07813B421AF00145005C31AC /* QuestionBankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBankTableViewCell.h; sourceTree = "<group>"; };
+		07813B431AF00145005C31AC /* QuestionBankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBankTableViewCell.m; sourceTree = "<group>"; };
 		078676BF1AE85112006D07BB /* WikipediaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaHelper.h; sourceTree = "<group>"; };
 		078676C01AE85112006D07BB /* WikipediaHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaHelper.m; sourceTree = "<group>"; };
 		079333111AEF43D800A13665 /* QuizMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMapViewController.h; sourceTree = "<group>"; };
@@ -120,6 +126,10 @@
 				07D658941ADEE553002DD979 /* LaunchScreen.xib */,
 				07D658AD1ADEE778002DD979 /* ExploreMapViewController.h */,
 				07D658AE1ADEE778002DD979 /* ExploreMapViewController.m */,
+				07813B3F1AF00032005C31AC /* QuestionBankTableViewController.h */,
+				07813B401AF00032005C31AC /* QuestionBankTableViewController.m */,
+				07813B421AF00145005C31AC /* QuestionBankTableViewCell.h */,
+				07813B431AF00145005C31AC /* QuestionBankTableViewCell.m */,
 				0793331B1AEF63E500A13665 /* QuestionBank.h */,
 				0793331C1AEF63E500A13665 /* QuestionBank.m */,
 				079333111AEF43D800A13665 /* QuizMapViewController.h */,
@@ -317,6 +327,8 @@
 			files = (
 				079333141AEF43D800A13665 /* QuizMapViewController.m in Sources */,
 				07D658AF1ADEE778002DD979 /* ExploreMapViewController.m in Sources */,
+				07813B411AF00032005C31AC /* QuestionBankTableViewController.m in Sources */,
+				07813B451AF00145005C31AC /* QuestionBankTableViewCell.m in Sources */,
 				07D658911ADEE553002DD979 /* AppDelegate.m in Sources */,
 				078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */,
 				07D6588E1ADEE553002DD979 /* main.m in Sources */,
