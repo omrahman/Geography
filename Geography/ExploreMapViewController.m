@@ -6,19 +6,19 @@
 //  Copyright (c) 2015 Omar Rahman. All rights reserved.
 //
 
-#import "MapViewController.h"
+#import "ExploreMapViewController.h"
 #import "MapKit/MapKit.h"
 #import "WebViewController.h"
 #import "WikipediaHelper.h"
 
-@interface MapViewController ()
+@interface ExploreMapViewController ()
 
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) NSTimer *timer;
 
 @end
 
-@implementation MapViewController
+@implementation ExploreMapViewController
 
 - (void)loadView
 {

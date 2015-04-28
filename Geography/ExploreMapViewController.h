@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "WebViewController.h"
 
-@interface MapViewController : UIViewController
+@interface ExploreMapViewController : UIViewController
 
 @end

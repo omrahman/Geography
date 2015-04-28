@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MapKit/MapKit.h"
-#import "MapViewController.h"
+#import "ExploreMapViewController.h"
 #import "WebViewController.h"
 #import "HomeViewController.h"
 

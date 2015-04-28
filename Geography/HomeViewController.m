@@ -8,11 +8,11 @@
 
 #import "HomeViewController.h"
 #import "QuizMapViewController.h"
-#import "MapViewController.h"
+#import "ExploreMapViewController.h"
 
 @interface HomeViewController ()
 
-@property (nonatomic, strong) MapViewController *mvc;
+@property (nonatomic, strong) ExploreMapViewController *mvc;
 @property (nonatomic, strong) QuizMapViewController *qvc;
 
 @end
@@ -22,7 +22,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _mvc = [[MapViewController alloc] init];
+        _mvc = [[ExploreMapViewController alloc] init];
         _mvc.title = @"Explore";
     }
     return self;
