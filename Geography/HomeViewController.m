@@ -23,24 +23,31 @@
     self = [super init];
     if (self) {
         _mvc = [[MapViewController alloc] init];
-        _mvc.title = @"Explore!";
-        _qvc = [[QuizMapViewController alloc] init];
-        _qvc.title = @"Quiz!";
+        _mvc.title = @"Explore";
     }
     return self;
 }
 
 - (IBAction)exploreButton:(id)sender {
+    self.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:self.mvc animated:YES];
 }
 
 - (IBAction)quizButton:(id)sender {
+    self.navigationController.navigationBarHidden = NO;
+    // Start a new game every time
+    self.qvc = [[QuizMapViewController alloc] init];
+    self.qvc.title = @"Where is...";
+
     [self.navigationController pushViewController:self.qvc animated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
 }
 
 @end

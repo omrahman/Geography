@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuizMapViewController : UIViewController
+@protocol QuestionBankDelegate <NSObject>
+
+@required
+- (void)questionBankEmpty;
+
+@end
+
+@interface QuizMapViewController : UIViewController <QuestionBankDelegate>
 
 @end
