@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="alertLabel" destination="XFL-Zp-WHy" id="ON1-8r-3v8"/>
                 <outlet property="mapView" destination="IPh-bd-sZJ" id="mpV-e6-mzs"/>
-                <outlet property="questionLabel" destination="s1x-OR-Gcn" id="hIA-gk-gut"/>
                 <outlet property="scoreLabel" destination="9MI-lJ-gqS" id="Dcn-fj-dAb"/>
                 <outlet property="skipButtonLabel" destination="aFY-7w-5o2" id="xoq-Uc-hcs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -35,12 +34,6 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1x-OR-Gcn">
-                    <rect key="frame" x="8" y="66" width="304" height="38"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFY-7w-5o2">
                     <rect key="frame" x="130" y="532" width="61" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -54,7 +47,6 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="s1x-OR-Gcn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="4AK-sh-jKr"/>
                 <constraint firstAttribute="trailing" secondItem="IPh-bd-sZJ" secondAttribute="trailing" id="8XL-q9-5NZ"/>
                 <constraint firstItem="IPh-bd-sZJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9ej-ec-CRY"/>
                 <constraint firstAttribute="trailing" secondItem="9MI-lJ-gqS" secondAttribute="trailing" constant="8" id="BiQ-Mo-yTo"/>
@@ -62,8 +54,6 @@
                 <constraint firstItem="aFY-7w-5o2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="130" id="Lhx-xC-ZTG"/>
                 <constraint firstAttribute="trailing" secondItem="XFL-Zp-WHy" secondAttribute="trailing" constant="8" id="LoK-ew-S0c"/>
                 <constraint firstItem="IPh-bd-sZJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MLo-yK-Gfv"/>
-                <constraint firstItem="s1x-OR-Gcn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="MSh-TE-we9"/>
-                <constraint firstAttribute="trailing" secondItem="s1x-OR-Gcn" secondAttribute="trailing" constant="8" id="NcD-Yj-Wvu"/>
                 <constraint firstItem="9MI-lJ-gqS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="102" id="Ysg-h6-tWO"/>
                 <constraint firstAttribute="trailing" secondItem="aFY-7w-5o2" secondAttribute="trailing" constant="129" id="fMQ-3C-wQO"/>
                 <constraint firstItem="XFL-Zp-WHy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="nO1-LK-CYm"/>

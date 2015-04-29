@@ -9,15 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "QuestionBank.h"
 
-@protocol QuestionBankDelegate <NSObject>
-
-@required
-- (void)questionBankEmpty;
-
-@end
-
-
-@interface QuizMapViewController : UIViewController <QuestionBankDelegate>
+@interface QuizMapViewController : UIViewController
 
 @property (nonatomic, strong) QuestionBank *questionBank;
 

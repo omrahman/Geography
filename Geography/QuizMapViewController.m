@@ -24,7 +24,6 @@
 @property (nonatomic) BOOL gameOver;
 @property (nonatomic) BOOL paused;
 
-@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *alertLabel;
 @property (weak, nonatomic) IBOutlet UIButton *skipButtonLabel;
@@ -32,6 +31,40 @@
 @end
 
 @implementation QuizMapViewController
+
+- (instancetype)initWithQuestionBank:(QuestionBank *)questionBank {
+    self = [super init];
+    if (self) {
+        self.questionBank = questionBank;
+        NSString *question = [self.questionBank randomQuestion];
+        self.currentQuestion = question;
+        self.title = [NSString stringWithFormat:@"Find %@", question];
+        self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+        self.questionBank.delegate = self;
+        self.score = 0;
+        self.gameOver = NO;
+        self.paused = NO;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationController.navigationBarHidden = NO;
+    self.alertLabel.alpha = 0;
+    
+    self.scoreLabel.text = [NSString stringWithFormat:@" Score: %ld ", self.score];
+    self.scoreLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    self.scoreLabel.layer.borderColor = [UIColor blackColor].CGColor;
+    self.scoreLabel.layer.borderWidth = 1.0;
+    
+    self.skipButtonLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    self.skipButtonLabel.layer.borderColor = [UIColor blackColor].CGColor;
+    self.skipButtonLabel.layer.borderWidth = 1.0;
+    [self.skipButtonLabel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [self.mapView addGestureRecognizer:self.tapGestureRecognizer];
+}
 
 - (IBAction)skipButton:(id)sender {
     
@@ -80,48 +113,13 @@
     }];
 }
 
-- (instancetype)initWithQuestionBank:(QuestionBank *)questionBank {
-    self = [super init];
-    if (self) {
-        self.questionBank = questionBank;
-        NSString *question = [self.questionBank randomQuestion];
-        self.currentQuestion = question;
-        self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-        self.questionBank.delegate = self;
-        self.score = 0;
-        self.gameOver = NO;
-        self.paused = NO;
-    }
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.navigationController.navigationBarHidden = NO;
-    self.alertLabel.alpha = 0;
-    
-    self.scoreLabel.text = [NSString stringWithFormat:@" Score: %ld ", self.score];
-    self.scoreLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    self.scoreLabel.layer.borderColor = [UIColor blackColor].CGColor;
-    self.scoreLabel.layer.borderWidth = 1.0;
-    
-    self.questionLabel.text = [NSString stringWithFormat:@"Find %@", self.currentQuestion];
-    self.questionLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    self.questionLabel.layer.borderColor = [UIColor blackColor].CGColor;
-    self.questionLabel.layer.borderWidth = 1.0;
-    
-    self.skipButtonLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    self.skipButtonLabel.layer.borderColor = [UIColor blackColor].CGColor;
-    self.skipButtonLabel.layer.borderWidth = 1.0;
-    [self.skipButtonLabel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [self.mapView addGestureRecognizer:self.tapGestureRecognizer];
-}
-
 - (void)changeQuestion {
     NSString *question = [self.questionBank randomQuestion];
     self.currentQuestion = question;
-    //self.questionLabel.text = [NSString stringWithFormat:@"Find %@", question];
+    if (!self.currentQuestion) {
+        [self gameOverSequence];
+        return;
+    }
     self.title = [NSString stringWithFormat:@"Find %@", question];
 }
 
@@ -160,10 +158,11 @@
     self.scoreLabel.text = [NSString stringWithFormat:@" Score: %ld ", self.score];
 }
 
-- (void)questionBankEmpty {
+- (void)gameOverSequence {
     self.gameOver = YES;
-    self.questionLabel.hidden = YES;
+    self.paused = YES;
     self.skipButtonLabel.hidden = YES;
+    self.title = @"Game Over!";
     NSString *messageString = [NSString stringWithFormat:@"Your final score is %ld", self.score];
          
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game over!"

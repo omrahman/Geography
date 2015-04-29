@@ -52,8 +52,10 @@
     NSArray *europeBank = @[@"Denmark", @"Germany", @"Austria", @"Italy", @"France",
                             @"Spain", @"Greece", @"Sweden", @"Finland"];
     NSArray *southAmericaBank = @[@"Peru",@"Brazil", @"Paraguay", @"Argentina"];
+    NSArray *singleton = @[@"United States"];
+
     
-    QuestionBank *qb0 = [[QuestionBank alloc] initWithName:@"World"
+        QuestionBank *qb0 = [[QuestionBank alloc] initWithName:@"World"
                                                      array:allCountries
                                                   bankType:kCountryBank];
     
@@ -68,9 +70,13 @@
                                                      array:southAmericaBank
                                                   bankType:kCountryBank];
     
+    QuestionBank *qb4 = [[QuestionBank alloc] initWithName:@"Singleton"
+                                                     array:singleton
+                                                  bankType:kCountryBank];
+    
     // Ideally, we'd have a separate function that constructs this array of
     // questionBanks, but for now just have it hardcoded; not difficult to fix
-    self.questionBanks = [[NSMutableArray alloc] initWithArray:@[qb0, qb1, qb2, qb3]];
+    self.questionBanks = [[NSMutableArray alloc] initWithArray:@[qb0, qb1, qb2, qb3, qb4]];
     
     [self.tableView registerClass:[QuestionBankTableViewCell class] forCellReuseIdentifier:@"questionBankCell"];
     

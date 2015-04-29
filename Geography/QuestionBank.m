@@ -45,8 +45,7 @@
 
 - (NSString *)randomQuestion {
     if ([self.privateQuestions count] == 0) {
-        [self.delegate questionBankEmpty];
-        return @"";
+        return nil;
     }
     int index = arc4random() % [self.privateQuestions count];
     NSString *location = self.privateQuestions[index];
