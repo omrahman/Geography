@@ -28,9 +28,10 @@ alpha:1.0]
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColorFromRGB(0x62ACD9);
+    
+    self.view.backgroundColor = UIColorFromRGB(0x9ad1f1);
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.title = @"Select a Question Bank";
 
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"countries" ofType:@"txt"];
@@ -45,13 +46,15 @@ alpha:1.0]
     }
      */
     
-    QuestionBank *all = [[QuestionBank alloc] initWithName:@"All Countries" array:allCountries];
-    
-    QuestionBank *qb1 = [[QuestionBank alloc] init];
-    QuestionBank *qb2 = [[QuestionBank alloc] initWithName:@"Random"
-                                                     array:@[@"Denmark", @"Japan", @"Canada"]];
+    QuestionBank *all = [[QuestionBank alloc] initWithName:@"World" array:allCountries];
+    QuestionBank *qb1 = [[QuestionBank alloc] initWithName:@"Africa" array:@[@"Morocco", @"Egypt",
+                                                                             @"Nigeria", @"South Africa",
+                                                                             @"Ethiopia", @"Kenya"]];
+    QuestionBank *qb2 = [[QuestionBank alloc] initWithName:@"Europe"
+                                                     array:@[@"Denmark", @"Germany", @"Austria", @"Italy", @"France",
+                                                             @"Spain", @"Greece", @"Sweden", @"Finland"]];
     QuestionBank *qb3 = [[QuestionBank alloc] initWithName:@"South America"
-                                                     array:@[@"Mexico",@"Brazil", @"Cuba", @"Guatemala"]];
+                                                     array:@[@"Peru",@"Brazil", @"Paraguay", @"Argentina"]];
     self.questionBanks = [[NSMutableArray alloc] initWithArray:@[all, qb1, qb2, qb3]];
     
     [self.tableView registerClass:[QuestionBankTableViewCell class] forCellReuseIdentifier:@"questionBankCell"];
@@ -67,6 +70,13 @@ alpha:1.0]
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+    NSLog(@"numberOfRowsInSection requested");
+    NSInteger n = [self.questionBanks count];
+    if (n % 2 == 0) {
+        self.view.backgroundColor = UIColorFromRGB(0xf7f3e8);
+    } else {
+        self.view.backgroundColor = UIColorFromRGB(0x9ad1f1);
+    }
     return [self.questionBanks count];
 }
 
@@ -75,7 +85,15 @@ alpha:1.0]
     QuestionBankTableViewCell *cell = (QuestionBankTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"questionBankCell" forIndexPath:indexPath];
     NSString *name = [self.questionBanks[indexPath.row] name];
     cell.questionBankLabel.text = [NSString stringWithFormat:@"%@", name];
-    cell.contentView.backgroundColor = UIColorFromRGB(0x62ACD9);
+    if (indexPath.row % 2) {
+        // Blue
+        cell.questionBankLabel.textColor = UIColorFromRGB(0x5c7d90);
+        cell.contentView.backgroundColor = UIColorFromRGB(0x9ad1f1);
+    } else {
+        // Beige
+        cell.questionBankLabel.textColor = UIColorFromRGB(0x94918b);
+        cell.contentView.backgroundColor = UIColorFromRGB(0xf7f3e8);
+    }
     
     return cell;
 }

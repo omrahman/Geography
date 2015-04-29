@@ -40,7 +40,6 @@
         self.paused = NO;
         [self.skipButtonLabel setTitle:@"Skip" forState:UIControlStateNormal];
         [self changeQuestion];
-
     }
     // User hit "Skip"
     else {
@@ -50,6 +49,7 @@
         self.score -= SKIPPED_ANSWER_PENALTY;
         [self updateScore];
         [self moveToRegion:self.currentQuestion];
+        self.questionLabel.text = [NSString stringWithFormat:@"%@ is here", self.currentQuestion];
         self.skipButtonLabel.enabled = YES;
     }
 }
@@ -104,7 +104,7 @@
     self.scoreLabel.layer.borderColor = [UIColor blackColor].CGColor;
     self.scoreLabel.layer.borderWidth = 1.0;
     
-    self.questionLabel.text = self.currentQuestion;
+    self.questionLabel.text = [NSString stringWithFormat:@"Find %@", self.currentQuestion];
     self.questionLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
     self.questionLabel.layer.borderColor = [UIColor blackColor].CGColor;
     self.questionLabel.layer.borderWidth = 1.0;
@@ -120,7 +120,7 @@
 - (void)changeQuestion {
     NSString *question = [self.questionBank randomQuestion];
     self.currentQuestion = question;
-    self.questionLabel.text = question;
+    self.questionLabel.text = [NSString stringWithFormat:@"Find %@", question];
 }
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer {
@@ -148,7 +148,7 @@
             self.alertLabel.text = @"Wrong!";
             self.score -= INCORRECT_ANSWER_PENALTY;
         }
-        [self fadein];
+        [self fadeIn];
         [self updateScore];
         self.skipButtonLabel.enabled = YES;
     }];
@@ -160,7 +160,7 @@
 
 - (void)questionBankEmpty {
     self.gameOver = YES;
-    self.questionLabel.text = @"";
+    self.questionLabel.hidden = YES;
     self.skipButtonLabel.hidden = YES;
     NSString *messageString = [NSString stringWithFormat:@"Your final score is %ld", self.score];
          
@@ -172,7 +172,7 @@
     [alert show];
 }
 
-- (void)fadein {
+- (void)fadeIn {
     self.alertLabel.alpha = 0;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
@@ -191,7 +191,7 @@
                 context:(void *)context {
     
     [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1];
+    [UIView setAnimationDuration:2.0];
     self.alertLabel.alpha = 0;
     [UIView commitAnimations];
     

@@ -12,6 +12,7 @@
 #import "WebViewController.h"
 #import "HomeViewController.h"
 #import "QuestionBankTableViewController.h"
+#import "FlatHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,8 +25,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    HomeViewController *hvc = [[HomeViewController alloc] init];
-    
+    // HomeViewController *hvc = [[HomeViewController alloc] init];
+    FlatHomeViewController *hvc = [[FlatHomeViewController alloc] init];
+
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
     
     [self.window setRootViewController:nc];

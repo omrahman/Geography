@@ -16,8 +16,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gey-A0-PkU">
-                    <rect key="frame" x="115" y="186" width="90" height="53"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <rect key="frame" x="38" y="98" width="244" height="141"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="74"/>
                     <state key="normal" title="Explore">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,8 +27,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7s-Oc-Zq8">
-                    <rect key="frame" x="130" y="247" width="60" height="74"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <rect key="frame" x="8" y="247" width="304" height="167"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="74"/>
                     <state key="normal" title="Quiz">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,12 +40,12 @@
             </subviews>
             <color key="backgroundColor" red="0.3843137254901961" green="0.67450980392156867" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="S7s-Oc-Zq8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="130" id="I2U-IR-pjd"/>
-                <constraint firstItem="gey-A0-PkU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="115" id="S6z-gX-eZz"/>
-                <constraint firstAttribute="trailing" secondItem="gey-A0-PkU" secondAttribute="trailing" constant="115" id="kB5-sO-UMV"/>
-                <constraint firstAttribute="trailing" secondItem="S7s-Oc-Zq8" secondAttribute="trailing" constant="130" id="pC9-fs-4Jp"/>
-                <constraint firstItem="S7s-Oc-Zq8" firstAttribute="top" secondItem="gey-A0-PkU" secondAttribute="bottom" constant="8" id="qrI-li-w4Q"/>
-                <constraint firstItem="gey-A0-PkU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="186" id="xeo-Ou-37M"/>
+                <constraint firstItem="gey-A0-PkU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="98" id="3lQ-IZ-Ra2"/>
+                <constraint firstAttribute="bottom" secondItem="S7s-Oc-Zq8" secondAttribute="bottom" constant="154" id="AbQ-WY-n41"/>
+                <constraint firstAttribute="trailing" secondItem="S7s-Oc-Zq8" secondAttribute="trailing" constant="8" id="GvM-qt-31x"/>
+                <constraint firstAttribute="trailing" secondItem="gey-A0-PkU" secondAttribute="trailing" constant="38" id="Pj9-gj-Hc8"/>
+                <constraint firstItem="gey-A0-PkU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="iRq-oP-awe"/>
+                <constraint firstItem="S7s-Oc-Zq8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="lHU-3B-PLQ"/>
             </constraints>
             <point key="canvasLocation" x="413" y="335"/>
         </view>

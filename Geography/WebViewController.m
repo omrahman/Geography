@@ -18,6 +18,7 @@
     UIWebView *webView = [[UIWebView alloc] init];
     webView.scalesPageToFit = YES;
     self.view = webView;
+    self.title = @"Wikipedia";
 }
 
 - (void)setURL:(NSURL *)URL {

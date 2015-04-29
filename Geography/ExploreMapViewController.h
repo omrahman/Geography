@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "WebViewController.h"
 
-@interface ExploreMapViewController : UIViewController
+@interface ExploreMapViewController : UIViewController <MKMapViewDelegate>
 
 @end

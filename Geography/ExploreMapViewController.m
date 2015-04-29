@@ -10,6 +10,7 @@
 #import "MapKit/MapKit.h"
 #import "WebViewController.h"
 #import "WikipediaHelper.h"
+#import "PointAnnotationWithPlacemark.h"
 
 @interface ExploreMapViewController ()
 
@@ -18,14 +19,10 @@
 
 @end
 
-@implementation ExploreMapViewController
+@implementation ExploreMapViewController 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.title = @"Explore";
-}
-
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     self.navigationController.navigationBarHidden = NO;
 }
 
@@ -38,8 +35,9 @@
     lpgr.minimumPressDuration = 0.5;
     [mapView addGestureRecognizer:lpgr];
     self.mapView = mapView;
+    self.mapView.delegate = self;
     self.view = mapView;
-    
+    self.title = @"Explore";
 }
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
@@ -59,7 +57,6 @@
                gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         [self.timer invalidate];
         self.timer = nil;
-        
     }
 }
 
@@ -77,26 +74,43 @@
     CLLocation *coordinate = [[CLLocation alloc] initWithLatitude:touchMapCoordinate.latitude
                                                         longitude:touchMapCoordinate.longitude];
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    [geocoder reverseGeocodeLocation:coordinate completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (error) { NSLog(@"ERROR"); }
-        
+    [geocoder reverseGeocodeLocation:coordinate
+                   completionHandler:^(NSArray *placemarks, NSError *error)
+    {
         CLPlacemark *placemark = placemarks[0];
         [self logPlacemark:placemark];
         
-        MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
-        pointAnnotation.coordinate = touchMapCoordinate;
-        pointAnnotation.title = [placemark country];
+        PointAnnotationWithPlacemark *ptAnnot = [[PointAnnotationWithPlacemark alloc] init];
+        ptAnnot.coordinate = touchMapCoordinate;
+        ptAnnot.title = [placemark country];
+        ptAnnot.placemark = placemark;
         
-        // When creating a custom MKPointAnnotation/MKPinPointAnnotation, make sure we have a reference
-        // to its placemark
-        
-        [self.mapView addAnnotation:pointAnnotation];
-        
-        WebViewController *wvc = [[WebViewController alloc] init];
-        wvc.title = @"Wikipedia";
-        wvc.URL = [WikipediaHelper makeURLFromPlacemark:placemark];
-        [self.navigationController pushViewController:wvc animated:YES];
+        [self.mapView addAnnotation:ptAnnot];
     }];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    NSString *identifier = @"pinAnnotation";
+    MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    
+    if (!pinView) {
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        pinView.animatesDrop = YES;
+        pinView.canShowCallout = YES;
+        pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    }
+    
+    return pinView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    WebViewController *wvc = [[WebViewController alloc] init];
+    CLPlacemark *placemark = ((PointAnnotationWithPlacemark *)view.annotation).placemark;
+    wvc.URL = [WikipediaHelper makeURLFromPlacemark:placemark];
+    [self.navigationController pushViewController:wvc animated:YES];
 }
 
 - (void)logPlacemark:(CLPlacemark *)placemark

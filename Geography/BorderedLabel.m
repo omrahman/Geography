@@ -3,7 +3,7 @@
 //  Geography
 //
 //  Created by Omar Rahman on 4/28/15.
-//  Adapted from an answer from this StackOverflow post by user kprevas:
+//  Adapted from an answer by user kprevas from this StackOverflow post:
 //  http://stackoverflow.com/questions/1103148/how-do-i-make-uilabel-display-outlined-text
 //
 //  Copyright (c) 2015 Omar Rahman. All rights reserved.
