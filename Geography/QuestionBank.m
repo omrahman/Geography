@@ -19,13 +19,7 @@
 @implementation QuestionBank
 
 - (instancetype)init {
-    NSArray *defaultArray = @[@"United States",
-                              @"China",
-                              @"Germany",
-                              @"Russia",
-                              @"Italy"];
-    
-    return [self initWithName:@"Default" array:defaultArray bankType:kCountryBank];
+    return [self initWithName:@"Default" array:@[] bankType:kCountryBank];
 }
 
 // Designated initializer
