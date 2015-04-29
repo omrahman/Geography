@@ -49,7 +49,8 @@
         self.score -= SKIPPED_ANSWER_PENALTY;
         [self updateScore];
         [self moveToRegion:self.currentQuestion];
-        self.questionLabel.text = [NSString stringWithFormat:@"%@ is here", self.currentQuestion];
+        self.title = [NSString stringWithFormat:@"%@ is here", self.currentQuestion];
+        //self.questionLabel.text = [NSString stringWithFormat:@"%@ is here", self.currentQuestion];
         self.skipButtonLabel.enabled = YES;
     }
 }
@@ -120,7 +121,8 @@
 - (void)changeQuestion {
     NSString *question = [self.questionBank randomQuestion];
     self.currentQuestion = question;
-    self.questionLabel.text = [NSString stringWithFormat:@"Find %@", question];
+    //self.questionLabel.text = [NSString stringWithFormat:@"Find %@", question];
+    self.title = [NSString stringWithFormat:@"Find %@", question];
 }
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer {

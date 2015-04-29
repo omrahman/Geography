@@ -34,6 +34,12 @@
                                           initWithTarget:self action:@selector(handleGesture:)];
     lpgr.minimumPressDuration = 0.5;
     [mapView addGestureRecognizer:lpgr];
+    UIBarButtonItem *newBackButton =
+    [[UIBarButtonItem alloc] initWithTitle:@""
+                                     style:UIBarButtonItemStylePlain
+                                    target:nil
+                                    action:nil];
+    [self.navigationItem setBackBarButtonItem:newBackButton];
     self.mapView = mapView;
     self.mapView.delegate = self;
     self.view = mapView;
