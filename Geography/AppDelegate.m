@@ -10,9 +10,8 @@
 #import "MapKit/MapKit.h"
 #import "ExploreMapViewController.h"
 #import "WebViewController.h"
-#import "HomeViewController.h"
 #import "QuestionBankTableViewController.h"
-#import "FlatHomeViewController.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,7 +25,7 @@
     // Override point for customization after application launch.
     
     // HomeViewController *hvc = [[HomeViewController alloc] init];
-    FlatHomeViewController *hvc = [[FlatHomeViewController alloc] init];
+    HomeViewController *hvc = [[HomeViewController alloc] init];
 
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
     

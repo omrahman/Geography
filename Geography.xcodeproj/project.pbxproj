@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		074341791AF08AB9003CE585 /* PointAnnotationWithPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 074341781AF08AB9003CE585 /* PointAnnotationWithPlacemark.m */; };
-		0743417C1AF09A5E003CE585 /* FlatHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0743417B1AF09A5E003CE585 /* FlatHomeViewController.m */; };
+		0743417C1AF09A5E003CE585 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0743417B1AF09A5E003CE585 /* HomeViewController.m */; };
 		0743417E1AF0AA7D003CE585 /* earth-icon-flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0743417D1AF0AA7D003CE585 /* earth-icon-flat.png */; };
 		074341811AF12967003CE585 /* UIColor+GeographyTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 074341801AF12967003CE585 /* UIColor+GeographyTheme.m */; };
 		07813B411AF00032005C31AC /* QuestionBankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07813B401AF00032005C31AC /* QuestionBankTableViewController.m */; };
@@ -18,7 +18,6 @@
 		078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 078676C01AE85112006D07BB /* WikipediaHelper.m */; };
 		079333141AEF43D800A13665 /* QuizMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079333121AEF43D800A13665 /* QuizMapViewController.m */; };
 		079333151AEF43D800A13665 /* QuizMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079333131AEF43D800A13665 /* QuizMapViewController.xib */; };
-		079333191AEF44FC00A13665 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079333171AEF44FC00A13665 /* HomeViewController.m */; };
 		0793331A1AEF44FC00A13665 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079333181AEF44FC00A13665 /* HomeViewController.xib */; };
 		0793331D1AEF63E500A13665 /* QuestionBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 0793331C1AEF63E500A13665 /* QuestionBank.m */; };
 		0793331F1AEF7BFD00A13665 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0793331E1AEF7BFD00A13665 /* QuartzCore.framework */; };
@@ -46,8 +45,8 @@
 /* Begin PBXFileReference section */
 		074341771AF08AB9003CE585 /* PointAnnotationWithPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointAnnotationWithPlacemark.h; sourceTree = "<group>"; };
 		074341781AF08AB9003CE585 /* PointAnnotationWithPlacemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointAnnotationWithPlacemark.m; sourceTree = "<group>"; };
-		0743417A1AF09A5E003CE585 /* FlatHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatHomeViewController.h; sourceTree = "<group>"; };
-		0743417B1AF09A5E003CE585 /* FlatHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlatHomeViewController.m; sourceTree = "<group>"; };
+		0743417A1AF09A5E003CE585 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		0743417B1AF09A5E003CE585 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		0743417D1AF0AA7D003CE585 /* earth-icon-flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth-icon-flat.png"; sourceTree = "<group>"; };
 		0743417F1AF12967003CE585 /* UIColor+GeographyTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GeographyTheme.h"; sourceTree = "<group>"; };
 		074341801AF12967003CE585 /* UIColor+GeographyTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GeographyTheme.m"; sourceTree = "<group>"; };
@@ -63,8 +62,6 @@
 		079333111AEF43D800A13665 /* QuizMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMapViewController.h; sourceTree = "<group>"; };
 		079333121AEF43D800A13665 /* QuizMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMapViewController.m; sourceTree = "<group>"; };
 		079333131AEF43D800A13665 /* QuizMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizMapViewController.xib; sourceTree = "<group>"; };
-		079333161AEF44FC00A13665 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		079333171AEF44FC00A13665 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		079333181AEF44FC00A13665 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		0793331B1AEF63E500A13665 /* QuestionBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBank.h; sourceTree = "<group>"; };
 		0793331C1AEF63E500A13665 /* QuestionBank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBank.m; sourceTree = "<group>"; };
@@ -136,8 +133,6 @@
 			children = (
 				07D6588F1ADEE553002DD979 /* AppDelegate.h */,
 				07D658901ADEE553002DD979 /* AppDelegate.m */,
-				079333161AEF44FC00A13665 /* HomeViewController.h */,
-				079333171AEF44FC00A13665 /* HomeViewController.m */,
 				079333181AEF44FC00A13665 /* HomeViewController.xib */,
 				07D658941ADEE553002DD979 /* LaunchScreen.xib */,
 				07D658AD1ADEE778002DD979 /* ExploreMapViewController.h */,
@@ -161,8 +156,8 @@
 				07D6588B1ADEE553002DD979 /* Supporting Files */,
 				07813B491AF0553D005C31AC /* BorderedLabel.h */,
 				07813B4A1AF0553D005C31AC /* BorderedLabel.m */,
-				0743417A1AF09A5E003CE585 /* FlatHomeViewController.h */,
-				0743417B1AF09A5E003CE585 /* FlatHomeViewController.m */,
+				0743417A1AF09A5E003CE585 /* HomeViewController.h */,
+				0743417B1AF09A5E003CE585 /* HomeViewController.m */,
 				0743417F1AF12967003CE585 /* UIColor+GeographyTheme.h */,
 				074341801AF12967003CE585 /* UIColor+GeographyTheme.m */,
 			);
@@ -358,14 +353,13 @@
 				074341791AF08AB9003CE585 /* PointAnnotationWithPlacemark.m in Sources */,
 				07D658AF1ADEE778002DD979 /* ExploreMapViewController.m in Sources */,
 				07813B411AF00032005C31AC /* QuestionBankTableViewController.m in Sources */,
-				0743417C1AF09A5E003CE585 /* FlatHomeViewController.m in Sources */,
+				0743417C1AF09A5E003CE585 /* HomeViewController.m in Sources */,
 				074341811AF12967003CE585 /* UIColor+GeographyTheme.m in Sources */,
 				07813B451AF00145005C31AC /* QuestionBankTableViewCell.m in Sources */,
 				07D658911ADEE553002DD979 /* AppDelegate.m in Sources */,
 				078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */,
 				07D6588E1ADEE553002DD979 /* main.m in Sources */,
 				0793331D1AEF63E500A13665 /* QuestionBank.m in Sources */,
-				079333191AEF44FC00A13665 /* HomeViewController.m in Sources */,
 				07A66B241AE75A1300756D21 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
