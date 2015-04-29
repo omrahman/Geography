@@ -24,16 +24,20 @@
                               @"Germany",
                               @"Russia",
                               @"Italy"];
-    return [self initWithName:@"Default" array:defaultArray];
+    
+    return [self initWithName:@"Default" array:defaultArray bankType:kCountryBank];
 }
 
 // Designated initializer
 - (instancetype)initWithName:(NSString *)name
-                       array:(NSArray *)array {
+                       array:(NSArray *)array
+                    bankType:(BankType)bankType
+{
     self = [super init];
     if (self) {
         _privateQuestions = [[NSMutableArray alloc] initWithArray:array copyItems:YES];
         _alreadyAsked = [[NSMutableArray alloc] init];
+        _bankType = bankType;
         _name = name;
     }
     return self;
@@ -57,7 +61,8 @@
 
 - (instancetype)copyWithZone:(NSZone *)zone {
     QuestionBank *qb = [[[self class] allocWithZone:zone] initWithName:self.name
-                                                                 array:self.privateQuestions];
+                                                                 array:self.privateQuestions
+                                                              bankType:self.bankType];
     return qb;
 }
 

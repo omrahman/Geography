@@ -10,6 +10,7 @@
 		074341791AF08AB9003CE585 /* PointAnnotationWithPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 074341781AF08AB9003CE585 /* PointAnnotationWithPlacemark.m */; };
 		0743417C1AF09A5E003CE585 /* FlatHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0743417B1AF09A5E003CE585 /* FlatHomeViewController.m */; };
 		0743417E1AF0AA7D003CE585 /* earth-icon-flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0743417D1AF0AA7D003CE585 /* earth-icon-flat.png */; };
+		074341811AF12967003CE585 /* UIColor+GeographyTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 074341801AF12967003CE585 /* UIColor+GeographyTheme.m */; };
 		07813B411AF00032005C31AC /* QuestionBankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07813B401AF00032005C31AC /* QuestionBankTableViewController.m */; };
 		07813B451AF00145005C31AC /* QuestionBankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07813B431AF00145005C31AC /* QuestionBankTableViewCell.m */; };
 		07813B481AF030F0005C31AC /* countries.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07813B471AF030F0005C31AC /* countries.txt */; };
@@ -48,6 +49,8 @@
 		0743417A1AF09A5E003CE585 /* FlatHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatHomeViewController.h; sourceTree = "<group>"; };
 		0743417B1AF09A5E003CE585 /* FlatHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlatHomeViewController.m; sourceTree = "<group>"; };
 		0743417D1AF0AA7D003CE585 /* earth-icon-flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth-icon-flat.png"; sourceTree = "<group>"; };
+		0743417F1AF12967003CE585 /* UIColor+GeographyTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GeographyTheme.h"; sourceTree = "<group>"; };
+		074341801AF12967003CE585 /* UIColor+GeographyTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GeographyTheme.m"; sourceTree = "<group>"; };
 		07813B3F1AF00032005C31AC /* QuestionBankTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBankTableViewController.h; sourceTree = "<group>"; };
 		07813B401AF00032005C31AC /* QuestionBankTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBankTableViewController.m; sourceTree = "<group>"; };
 		07813B421AF00145005C31AC /* QuestionBankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBankTableViewCell.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				07813B4A1AF0553D005C31AC /* BorderedLabel.m */,
 				0743417A1AF09A5E003CE585 /* FlatHomeViewController.h */,
 				0743417B1AF09A5E003CE585 /* FlatHomeViewController.m */,
+				0743417F1AF12967003CE585 /* UIColor+GeographyTheme.h */,
+				074341801AF12967003CE585 /* UIColor+GeographyTheme.m */,
 			);
 			path = Geography;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				07D658AF1ADEE778002DD979 /* ExploreMapViewController.m in Sources */,
 				07813B411AF00032005C31AC /* QuestionBankTableViewController.m in Sources */,
 				0743417C1AF09A5E003CE585 /* FlatHomeViewController.m in Sources */,
+				074341811AF12967003CE585 /* UIColor+GeographyTheme.m in Sources */,
 				07813B451AF00145005C31AC /* QuestionBankTableViewCell.m in Sources */,
 				07D658911ADEE553002DD979 /* AppDelegate.m in Sources */,
 				078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */,
@@ -479,6 +485,7 @@
 			baseConfigurationReference = BF25C80EE1EF3B90C5881096 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Geography/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,6 +498,7 @@
 			baseConfigurationReference = 92AAA16BBC60B38EF4745319 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Geography/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
