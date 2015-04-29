@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface QuestionBank : NSObject
+@interface QuestionBank : NSObject <NSCopying>
 
 @property (nonatomic, readonly, copy) NSArray *questions;
 @property (nonatomic, strong) NSString *name;

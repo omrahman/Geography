@@ -44,11 +44,6 @@
         [self.delegate questionBankEmpty];
         return @"";
     }
-    /*
-    if ([self.privateQuestions count] == 0) {
-        self.privateQuestions = self.alreadyAsked;
-        self.alreadyAsked = [[NSMutableArray alloc] init];
-    } */
     int index = arc4random() % [self.privateQuestions count];
     NSString *location = self.privateQuestions[index];
     [self.alreadyAsked insertObject:location atIndex:0];
@@ -58,6 +53,12 @@
 
 - (NSArray *)questions {
     return [self.privateQuestions copy];
+}
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    QuestionBank *qb = [[[self class] allocWithZone:zone] initWithName:self.name
+                                                                 array:self.privateQuestions];
+    return qb;
 }
 
 @end

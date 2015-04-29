@@ -38,14 +38,14 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.3843137254901961" green="0.67450980392156867" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="gey-A0-PkU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="134" id="Ind-Zq-gjT"/>
-                <constraint firstAttribute="trailing" secondItem="S7s-Oc-Zq8" secondAttribute="trailing" constant="144" id="U8q-ap-y2y"/>
-                <constraint firstAttribute="trailing" secondItem="gey-A0-PkU" secondAttribute="trailing" constant="134" id="V0h-Ga-Pcf"/>
-                <constraint firstItem="gey-A0-PkU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="269" id="eVM-PA-wpu"/>
-                <constraint firstItem="S7s-Oc-Zq8" firstAttribute="top" secondItem="gey-A0-PkU" secondAttribute="bottom" constant="8" id="mrL-lJ-jnt"/>
-                <constraint firstItem="S7s-Oc-Zq8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="pps-wN-dgc"/>
+                <constraint firstItem="S7s-Oc-Zq8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="130" id="I2U-IR-pjd"/>
+                <constraint firstItem="gey-A0-PkU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="115" id="S6z-gX-eZz"/>
+                <constraint firstAttribute="trailing" secondItem="gey-A0-PkU" secondAttribute="trailing" constant="115" id="kB5-sO-UMV"/>
+                <constraint firstAttribute="trailing" secondItem="S7s-Oc-Zq8" secondAttribute="trailing" constant="130" id="pC9-fs-4Jp"/>
+                <constraint firstItem="S7s-Oc-Zq8" firstAttribute="top" secondItem="gey-A0-PkU" secondAttribute="bottom" constant="8" id="qrI-li-w4Q"/>
+                <constraint firstItem="gey-A0-PkU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="186" id="xeo-Ou-37M"/>
             </constraints>
             <point key="canvasLocation" x="413" y="335"/>
         </view>

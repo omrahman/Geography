@@ -20,6 +20,15 @@
 
 @implementation ExploreMapViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"Explore";
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)loadView
 {
     CGRect bounds = [[UIScreen mainScreen] bounds];
@@ -87,9 +96,7 @@
         wvc.title = @"Wikipedia";
         wvc.URL = [WikipediaHelper makeURLFromPlacemark:placemark];
         [self.navigationController pushViewController:wvc animated:YES];
-        
     }];
-
 }
 
 - (void)logPlacemark:(CLPlacemark *)placemark

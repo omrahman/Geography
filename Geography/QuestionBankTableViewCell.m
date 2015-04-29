@@ -7,6 +7,8 @@
 //
 
 #import "QuestionBankTableViewCell.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @implementation QuestionBankTableViewCell
 
@@ -14,10 +16,9 @@
               reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.questionBankLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 30)];
-        self.questionBankLabel.textColor = [UIColor blackColor];
+        self.questionBankLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 300, 30)];
+        self.questionBankLabel.textColor = [UIColor whiteColor];
         self.questionBankLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:17.0f];
-        
         [self addSubview:self.questionBankLabel];
     }
     return self;

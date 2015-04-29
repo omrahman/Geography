@@ -15,7 +15,7 @@
     
     NSString *ocean = [placemark ocean];
     NSString *country = [placemark country];
-    NSString *city = [placemark locality];
+    //NSString *city = [placemark locality];
     
     NSString *base = @"http://en.wikipedia.org/wiki/";
     NSString *query;

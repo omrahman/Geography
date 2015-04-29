@@ -25,29 +25,26 @@
     self = [super init];
     if (self) {
         _mvc = [[ExploreMapViewController alloc] init];
-        _mvc.title = @"Explore";
         _qbtvc = [[QuestionBankTableViewController alloc] init];
-        _qbtvc.title = @"Select a question bank";
 
     }
     return self;
 }
 
 - (IBAction)exploreButton:(id)sender {
-    self.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:self.mvc animated:YES];
 }
 
 - (IBAction)quizButton:(id)sender {
-    self.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:self.qbtvc animated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //NSLog(@"%@", self.view.backgroundColor);
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = YES;
 }
 
