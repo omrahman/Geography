@@ -21,12 +21,22 @@
 
 @implementation QuestionBankTableViewController
 
+- (void)loadView {
+    [super loadView];
+    UIBarButtonItem *newBackButton =
+    [[UIBarButtonItem alloc] initWithTitle:@""
+                                     style:UIBarButtonItemStylePlain
+                                    target:nil
+                                    action:nil];
+    [self.navigationItem setBackBarButtonItem:newBackButton];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = UIColorFromRGB(0x9ad1f1);
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+
     self.title = @"Select a Question Bank";
 
     // Opens a text file and reads in countries as NSString * line by line into an array
@@ -79,9 +89,9 @@
     
     // Color the background appropriately as rows alternate colors
     if (numRows % 2 == 0) {
-        self.view.backgroundColor = [UIColor mapBeigeLight];
+        self.tableView.backgroundColor = [UIColor mapBeigeLight];
     } else {
-        self.view.backgroundColor = [UIColor oceanBlueLight];
+        self.tableView.backgroundColor = [UIColor oceanBlueLight];
     }
     return numRows;
 }

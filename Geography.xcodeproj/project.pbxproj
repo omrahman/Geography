@@ -18,7 +18,6 @@
 		078676C11AE85112006D07BB /* WikipediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 078676C01AE85112006D07BB /* WikipediaHelper.m */; };
 		079333141AEF43D800A13665 /* QuizMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079333121AEF43D800A13665 /* QuizMapViewController.m */; };
 		079333151AEF43D800A13665 /* QuizMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079333131AEF43D800A13665 /* QuizMapViewController.xib */; };
-		0793331A1AEF44FC00A13665 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079333181AEF44FC00A13665 /* HomeViewController.xib */; };
 		0793331D1AEF63E500A13665 /* QuestionBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 0793331C1AEF63E500A13665 /* QuestionBank.m */; };
 		0793331F1AEF7BFD00A13665 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0793331E1AEF7BFD00A13665 /* QuartzCore.framework */; };
 		07A66B241AE75A1300756D21 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A66B231AE75A1300756D21 /* WebViewController.m */; };
@@ -62,7 +61,6 @@
 		079333111AEF43D800A13665 /* QuizMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMapViewController.h; sourceTree = "<group>"; };
 		079333121AEF43D800A13665 /* QuizMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMapViewController.m; sourceTree = "<group>"; };
 		079333131AEF43D800A13665 /* QuizMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizMapViewController.xib; sourceTree = "<group>"; };
-		079333181AEF44FC00A13665 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		0793331B1AEF63E500A13665 /* QuestionBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBank.h; sourceTree = "<group>"; };
 		0793331C1AEF63E500A13665 /* QuestionBank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBank.m; sourceTree = "<group>"; };
 		0793331E1AEF7BFD00A13665 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -133,33 +131,32 @@
 			children = (
 				07D6588F1ADEE553002DD979 /* AppDelegate.h */,
 				07D658901ADEE553002DD979 /* AppDelegate.m */,
-				079333181AEF44FC00A13665 /* HomeViewController.xib */,
-				07D658941ADEE553002DD979 /* LaunchScreen.xib */,
+				07813B491AF0553D005C31AC /* BorderedLabel.h */,
+				07813B4A1AF0553D005C31AC /* BorderedLabel.m */,
 				07D658AD1ADEE778002DD979 /* ExploreMapViewController.h */,
 				07D658AE1ADEE778002DD979 /* ExploreMapViewController.m */,
+				0743417A1AF09A5E003CE585 /* HomeViewController.h */,
+				0743417B1AF09A5E003CE585 /* HomeViewController.m */,
+				07D658941ADEE553002DD979 /* LaunchScreen.xib */,
 				074341771AF08AB9003CE585 /* PointAnnotationWithPlacemark.h */,
 				074341781AF08AB9003CE585 /* PointAnnotationWithPlacemark.m */,
-				07813B3F1AF00032005C31AC /* QuestionBankTableViewController.h */,
-				07813B401AF00032005C31AC /* QuestionBankTableViewController.m */,
-				07813B421AF00145005C31AC /* QuestionBankTableViewCell.h */,
-				07813B431AF00145005C31AC /* QuestionBankTableViewCell.m */,
 				0793331B1AEF63E500A13665 /* QuestionBank.h */,
 				0793331C1AEF63E500A13665 /* QuestionBank.m */,
+				07813B421AF00145005C31AC /* QuestionBankTableViewCell.h */,
+				07813B431AF00145005C31AC /* QuestionBankTableViewCell.m */,
+				07813B3F1AF00032005C31AC /* QuestionBankTableViewController.h */,
+				07813B401AF00032005C31AC /* QuestionBankTableViewController.m */,
 				079333111AEF43D800A13665 /* QuizMapViewController.h */,
 				079333121AEF43D800A13665 /* QuizMapViewController.m */,
 				079333131AEF43D800A13665 /* QuizMapViewController.xib */,
+				0743417F1AF12967003CE585 /* UIColor+GeographyTheme.h */,
+				074341801AF12967003CE585 /* UIColor+GeographyTheme.m */,
 				07A66B221AE75A1300756D21 /* WebViewController.h */,
 				07A66B231AE75A1300756D21 /* WebViewController.m */,
 				078676BF1AE85112006D07BB /* WikipediaHelper.h */,
 				078676C01AE85112006D07BB /* WikipediaHelper.m */,
 				07D658921ADEE553002DD979 /* Images.xcassets */,
 				07D6588B1ADEE553002DD979 /* Supporting Files */,
-				07813B491AF0553D005C31AC /* BorderedLabel.h */,
-				07813B4A1AF0553D005C31AC /* BorderedLabel.m */,
-				0743417A1AF09A5E003CE585 /* HomeViewController.h */,
-				0743417B1AF09A5E003CE585 /* HomeViewController.m */,
-				0743417F1AF12967003CE585 /* UIColor+GeographyTheme.h */,
-				074341801AF12967003CE585 /* UIColor+GeographyTheme.m */,
 			);
 			path = Geography;
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 				079333151AEF43D800A13665 /* QuizMapViewController.xib in Resources */,
 				07D658931ADEE553002DD979 /* Images.xcassets in Resources */,
 				07813B481AF030F0005C31AC /* countries.txt in Resources */,
-				0793331A1AEF44FC00A13665 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

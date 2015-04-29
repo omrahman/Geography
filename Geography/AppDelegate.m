@@ -12,6 +12,7 @@
 #import "WebViewController.h"
 #import "QuestionBankTableViewController.h"
 #import "HomeViewController.h"
+#import "UIColor+GeographyTheme.h"
 
 @interface AppDelegate ()
 
@@ -24,10 +25,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    // HomeViewController *hvc = [[HomeViewController alloc] init];
     HomeViewController *hvc = [[HomeViewController alloc] init];
 
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:hvc];
+    
+    nc.navigationBar.barTintColor = [UIColor oceanBlueLight];
+    nc.navigationBar.translucent = NO;
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor oceanBlueDark], NSForegroundColorAttributeName,  [UIFont fontWithName:@"Helvetica-Bold" size:20], NSFontAttributeName, nil]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor oceanBlueDark]];
     
     [self.window setRootViewController:nc];
     [self.window setBackgroundColor:[UIColor whiteColor]];
