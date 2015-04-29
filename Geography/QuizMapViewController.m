@@ -8,6 +8,7 @@
 
 #import "QuizMapViewController.h"
 #import "QuestionBank.h"
+#import "UIColor+GeographyTheme.h"
 #import <MapKit/MapKit.h>
 #import <QuartzCore/QuartzCore.h>
 
@@ -54,14 +55,16 @@
     self.alertLabel.alpha = 0;
     
     self.scoreLabel.text = [NSString stringWithFormat:@" Score: %ld ", self.score];
-    self.scoreLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    self.scoreLabel.layer.borderColor = [UIColor blackColor].CGColor;
+    self.scoreLabel.textColor = [UIColor mapBeigeDark];
+    self.scoreLabel.layer.backgroundColor = [UIColor mapBeigeLight].CGColor;
+    self.scoreLabel.layer.borderColor = [UIColor mapBeigeDark].CGColor;
     self.scoreLabel.layer.borderWidth = 1.0;
     
-    self.skipButtonLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    self.skipButtonLabel.layer.borderColor = [UIColor blackColor].CGColor;
+    [self.skipButtonLabel setTitle:@"Skip" forState:UIControlStateNormal];
+    [self.skipButtonLabel setTitleColor:[UIColor mapBeigeDark] forState:UIControlStateNormal];
+    self.skipButtonLabel.layer.backgroundColor = [UIColor mapBeigeLight].CGColor;
+    self.skipButtonLabel.layer.borderColor = [UIColor mapBeigeDark].CGColor;
     self.skipButtonLabel.layer.borderWidth = 1.0;
-    [self.skipButtonLabel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     [self.mapView addGestureRecognizer:self.tapGestureRecognizer];
 }
